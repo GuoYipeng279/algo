@@ -53,3 +53,15 @@ def suffix_array_best(s):
                          fillvalue=-1)])
         k <<= 1
     return line
+
+
+def rank(seq):
+    tore = [None]*len(seq)
+    for i,s in enumerate(seq): tore[s] = i
+    return tore
+
+
+def show(seq, s):
+    tore = [None]*len(s)
+    for i,se in enumerate(seq): tore[se] = s[i:]
+    return tore
