@@ -1,6 +1,6 @@
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
-with open("89.pdf", "rb") as in_f:
+with open("10_11_merged.pdf", "rb") as in_f:
     input1 = PdfFileReader(in_f)
     output = PdfFileWriter()
 
@@ -14,5 +14,5 @@ with open("89.pdf", "rb") as in_f:
         page.cropBox.upperRight = (550, 700)
         output.addPage(page)
 
-    with open("out.pdf", "wb") as out_f:
+    with open("out10.pdf", "wb") as out_f:
         output.write(out_f)
